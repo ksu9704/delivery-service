@@ -1,0 +1,6 @@
+# 프로젝트 제외 경로
+/service/.gradle/
+/service/api/build/
+/service/api/build/classes/java/main/
+/service/db/build/
+/service/db/build/classes/java/main/
