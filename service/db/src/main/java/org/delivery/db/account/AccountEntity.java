@@ -1,7 +1,10 @@
 package org.delivery.db.account;
 
 
-import lombok.*;
+import lombok.Builder;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 import org.delivery.db.BaseEntity;
 
@@ -14,5 +17,5 @@ import javax.persistence.Table;
 @EqualsAndHashCode(callSuper = true)
 @Entity
 @Table(name = "account")
-public class AccountEntity extends BaseEntity {
+public class AccountEntity extends BaseEntity{
 }

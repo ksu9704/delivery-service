@@ -17,6 +17,12 @@ public class AccountApiController {
 
     private final AccountRepository accountRepository;
 
+//    @GetMapping("")
+//    public void save(){
+//        var account = AccountEntity.builder().build();
+//        accountRepository.save(account);
+//    }
+
     @GetMapping("/me")
     public AccountMeResponse me(){
 
