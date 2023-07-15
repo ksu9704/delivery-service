@@ -17,5 +17,5 @@ import javax.persistence.Table;
 @EqualsAndHashCode(callSuper = true)
 @Entity
 @Table(name = "account")
-public class AccountEntity extends BaseEntity{
+public class AccountEntity extends BaseEntity {
 }
