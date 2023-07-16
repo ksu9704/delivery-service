@@ -10,7 +10,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-
 @Slf4j
 @Component
 public class LoggerFilter implements Filter {
@@ -35,11 +34,11 @@ public class LoggerFilter implements Filter {
 
             // authorization-token : ??? , user-agent : ???
             headerValues
-                    .append("[")
-                    .append(headerKey)
-                    .append(" : ")
-                    .append(headerValue)
-                    .append("] ");
+                .append("[")
+                .append(headerKey)
+                .append(" : ")
+                .append(headerValue)
+                .append("] ");
         });
 
         var requestBody = new String(req.getContentAsByteArray());
@@ -56,11 +55,11 @@ public class LoggerFilter implements Filter {
             var headerValue = res.getHeader(headerKey);
 
             responseHeaderValues
-                    .append("[")
-                    .append(headerKey)
-                    .append(" : ")
-                    .append(headerValue)
-                    .append("] ");
+                .append("[")
+                .append(headerKey)
+                .append(" : ")
+                .append(headerValue)
+                .append("] ");
         });
 
         var responseBody = new String(res.getContentAsByteArray());

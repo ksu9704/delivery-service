@@ -12,8 +12,6 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Service
 public @interface Converter {
-
     @AliasFor(annotation = Service.class)
     String value() default "";
-
 }
