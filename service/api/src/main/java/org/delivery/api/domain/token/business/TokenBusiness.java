@@ -9,7 +9,6 @@ import org.delivery.api.domain.token.converter.TokenConverter;
 import org.delivery.api.domain.token.service.TokenService;
 import org.delivery.db.user.UserEntity;
 
-import javax.swing.text.html.Option;
 import java.util.Optional;
 
 @RequiredArgsConstructor
@@ -27,17 +26,17 @@ public class TokenBusiness {
     public TokenResponse issueToken(UserEntity userEntity){
 
         return Optional.ofNullable(userEntity)
-            .map(ue -> {
-                return ue.getId();
-            })
-            .map(userId -> {
-                var accessToken = tokenService.issueAccessToken(userId);
-                var refreshToken = tokenService.issueRefreshToken(userId);
-                return tokenConverter.toResponse(accessToken, refreshToken);
-            })
-            .orElseThrow(
-                ()-> new ApiException(ErrorCode.NULL_POINT)
-            );
+                .map(ue -> {
+                    return ue.getId();
+                })
+                .map(userId -> {
+                    var accessToken = tokenService.issueAccessToken(userId);
+                    var refreshToken = tokenService.issueRefreshToken(userId);
+                    return tokenConverter.toResponse(accessToken, refreshToken);
+                })
+                .orElseThrow(
+                        ()-> new ApiException(ErrorCode.NULL_POINT)
+                );
     }
 
     public Long validationAccessToken(String accessToken){
