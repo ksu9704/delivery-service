@@ -2,8 +2,8 @@ package org.delivery.api.resolver;
 
 import lombok.RequiredArgsConstructor;
 import org.delivery.api.common.annotation.UserSession;
-import org.delivery.api.domain.model.User;
-import org.delivery.api.domain.service.UserService;
+import org.delivery.api.domain.user.model.User;
+import org.delivery.api.domain.user.service.UserService;
 import org.springframework.core.MethodParameter;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.support.WebDataBinderFactory;
@@ -44,16 +44,16 @@ public class UserSessionResolver implements HandlerMethodArgumentResolver {
 
         // 사용자 정보 셋팅
         return User.builder()
-            .id(userEntity.getId())
-            .name(userEntity.getName())
-            .email(userEntity.getEmail())
-            .status(userEntity.getStatus())
-            .password(userEntity.getPassword())
-            .address(userEntity.getAddress())
-            .registeredAt(userEntity.getRegisteredAt())
-            .unregisteredAt(userEntity.getUnregisteredAt())
-            .lastLoginAt(userEntity.getLastLoginAt())
-            .build()
-            ;
+                .id(userEntity.getId())
+                .name(userEntity.getName())
+                .email(userEntity.getEmail())
+                .status(userEntity.getStatus())
+                .password(userEntity.getPassword())
+                .address(userEntity.getAddress())
+                .registeredAt(userEntity.getRegisteredAt())
+                .unregisteredAt(userEntity.getUnregisteredAt())
+                .lastLoginAt(userEntity.getLastLoginAt())
+                .build()
+                ;
     }
 }
