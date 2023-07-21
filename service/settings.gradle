@@ -3,4 +3,5 @@ include 'api'
 include 'db'
 include 'db'
 include 'db'
+include 'store-admin'
 
