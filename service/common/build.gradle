@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+}
+
+group 'org.delivery'
+version '1.0-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compileOnly 'org.projectlombok:lombok:1.18.26'
+    annotationProcessor 'org.projectlombok:lombok:1.18.26'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+jar {
+    enabled = true
+}
