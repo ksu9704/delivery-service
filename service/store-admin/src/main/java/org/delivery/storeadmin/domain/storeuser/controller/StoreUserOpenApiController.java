@@ -1,9 +1,9 @@
-package org.delivery.storeadmin.domain.user.controller;
+package org.delivery.storeadmin.domain.storeuser.controller;
 
 import lombok.RequiredArgsConstructor;
-import org.delivery.storeadmin.domain.user.business.StoreUserBusiness;
-import org.delivery.storeadmin.domain.user.controller.model.StoreUserRegisterRequest;
-import org.delivery.storeadmin.domain.user.controller.model.StoreUserResponse;
+import org.delivery.storeadmin.domain.storeuser.business.StoreUserBusiness;
+import org.delivery.storeadmin.domain.storeuser.controller.model.StoreUserRegisterRequest;
+import org.delivery.storeadmin.domain.storeuser.controller.model.StoreUserResponse;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

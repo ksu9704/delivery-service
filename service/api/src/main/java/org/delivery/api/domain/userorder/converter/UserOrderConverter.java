@@ -14,6 +14,7 @@ public class UserOrderConverter {
 
     public UserOrderEntity toEntity(
         User user,
+        Long storeId,
         List<StoreMenuEntity> storeMenuEntityList
     ){
         var totalAmount = storeMenuEntityList.stream()
@@ -22,6 +23,7 @@ public class UserOrderConverter {
 
         return UserOrderEntity.builder()
             .userId(user.getId())
+            .storeId(storeId)
             .amount(totalAmount)
             .build()
             ;

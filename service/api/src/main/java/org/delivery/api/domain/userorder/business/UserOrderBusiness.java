@@ -51,7 +51,7 @@ public class UserOrderBusiness {
             .map(it -> storeMenuService.getStoreMenuWithThrow(it))
             .collect(Collectors.toList());
 
-        var userOrderEntity = userOrderConverter.toEntity(user, storeMenuEntityList);
+        var userOrderEntity = userOrderConverter.toEntity(user, body.getStoreId(), storeMenuEntityList);
 
         // 주문
         var newUserOrderEntity = userOrderService.order(userOrderEntity);
@@ -70,10 +70,8 @@ public class UserOrderBusiness {
             userOrderMenuService.order(it);
         });
 
-
         // 비동기로 가맹점에 주문 알리기
         userOrderProducer.sendOrder(newUserOrderEntity);
-
 
         // response
         return userOrderConverter.toResponse(newUserOrderEntity);
