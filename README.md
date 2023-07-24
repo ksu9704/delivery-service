@@ -2,7 +2,7 @@
 
 ### Delivery Service [ DB_Schema ]
 
-<img width="879" alt="스크린샷 2023-07-19 오후 10 35 20" src="https://github.com/KongSangUk/delivery-service/assets/100742282/16e1914d-795c-4a95-a07c-be9d1101ab9f">
+![스크린샷 2023-07-24 오후 1 15 40](https://github.com/KongSangUk/delivery-service/assets/100742282/69ed455c-e3ad-4774-aee4-e28ce6ceb3d6)
 
 
 ### Architecture
